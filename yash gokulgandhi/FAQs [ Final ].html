@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="NavigationStyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Cart.css"/>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="master.css">
+  <link rel="stylesheet" type="text/css" href="faqs.css">
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <title>FAQs</title>
+
+  <script>
+		
+    function Delete(e){
+      let items = [];
+      JSON.parse(localStorage.getItem('items')).map(data=>{
+        if(data.id != e.parentElement.parentElement.children[0].textContent){
+          
+          items.push(data);
+
+        }
+      });
+      localStorage.setItem('items',JSON.stringify(items));
+      window.location.reload();
+    };
+  </script>
+  
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="HOME [ Final ].html"><img src="Images/003.PNG" alt="logo"></a>
+    <nav>
+        <ul class="nav__links">
+            <li><a href="HOME [ Final ].html">Home</a></li>                  
+            <li><a href="Product [ Final ].html">Products</a></li>
+            <li><a href="About US [ Final ].html">About US</a></li>
+            <li><a href="Contact US [ FINAL ].html">Contact US</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+        </ul>
+    </nav>
+    
+
+  
+    <div class="iconShopping">
+      <div class="cta">
+        <p>0</p>
+      <p class="menu cta">0</p>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+  </div>
+
+</header>
+<div class="overlay">
+    <a class="close">&times;</a>
+    <div class="overlay__content">
+        <a href="Product [ Final ].html">Products</a>
+        <a href="About US [ Final ].html">About US</a>
+        <a href="Contact US [ FINAL ].html">Contact US</a>
+        <a href="faqs.html">FAQs</a>
+    </div>
+</div>
+<script type="text/javascript" src="mobile.js"></script>
+
+
+<br><br><br><br><br><br><br>
+
+  <div class="header">
+    <h1>Faqs</h1>
+  </div>
+  <br><br><br><br>
+
+<div class="QnA">
+  <div class="Q">
+    <h1>What are the Shop Timings?</h1>
+  </div>
+  <div class="A">
+    <h1>Our Outlets open from 10 am to 10 pm.</h1>
+  </div>
+</div>
+
+
+
+<div class="QnA" style="height: 250px">
+  <div class="Q">
+    <h1>What are the Payment Modes offered by Mobile Gallery ?</h1>
+  </div>
+  <div class="A" style="height: 160px">
+    <h1>1.Through Credit / Debit Cards (such as Paytm , Google Pay , etc)<br>
+
+        2.Through UPI (such as GPay , PayTm , PhonePay , etc.)<br>
+
+        3.Amid this Pandemic Situation there is no Cash On Delivery available. (Sorry for the Inconveince)
+    </h1>
+  </div>
+</div>
+<div class="QnA">
+  <div class="Q">
+    <h1>Are there any Shipping / Delivery Charges ?</h1>
+  </div>
+  <div class="A">
+    <h1>No, Mobile Gallery Provides you with Free Shipping all ovver Country.</h1>
+  </div>
+</div>
+<div class="QnA">
+  <div class="Q">
+    <h1>How long will my order take to ship?</h1>
+  </div>
+  <div class="A">
+    <h1>It depends on the city and the area that you live. (NOTE : Delievry may be affected as per the lockdown situation)</h1>
+  </div>
+</div>
+<div class="QnA">
+  <div class="Q">
+    <h1>Can I modify/cancel my order?</h1>
+  </div>
+  <div class="A">
+    <h1>The online order once placed cannot be modified but surely you can cancel it anytime you want.</h1>
+  </div>
+</div>
+
+<div class="QnA">
+  <div class="Q">
+    <h1>Do I need to pay taxes on my order?</h1>
+  </div>
+  <div class="A">
+    <h1>No, all the prices mentioned on the website are inclusive of all taxes.</h1>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  var counter = 1;
+  setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 4){
+      counter = 1;
+    }
+  }, 5000);
+  </script>
+
+<div class="cartBox">
+<div class="cart">
+<i class="fa fa-close"></i>
+<h1>Cart</h1>
+<br><br>
+<table></table>
+</div>
+<div class="anchor">
+<button onclick="BillOut()">Proceed To Checkout</button>
+</div>
+</div>
+
+<div class="Bill">
+<div class="cart">
+<i class="fa fa-close"></i>
+<h1>Bill</h1>
+<br><br>
+<table></table>
+<div class="table">
+<table2></table2>
+</div>
+</div>
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+       <li><a href="HOME [ Final ].html">Home</a></li>
+       <li><a href="About US [ Final ].html">About US</a></li>
+          <li><a href="Product [ Final ].html">Product</a></li>
+          <li><a href="Contact US [ FINAL ].html">Contact US</a></li>  	 				
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="FAQs [ Final ].html">FAQ</a></li>
+          <li><a href="FAQs [ Final ].html">shipping</a></li>
+          <li><a href="FAQs [ Final ].html">returns</a></li>
+          <li><a href="FAQs [ Final ].html">order status</a></li>
+          <li><a href="FAQs [ Final ].html">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="Smartphones [ Final ].html">Smartphones</a></li>
+          <li><a href="Accessories [ Final ].html">PowerBanks</a></li>
+          <li><a href="Accessories [ Final ].html">Smart Watches</a></li>
+          <li><a href="Accessories [ Final ].html">Earphones</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/nvv.edificators.31"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/edificators"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/the_edificators/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCgrNHNdH9kALLAYYRzkAP7g"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- script -->
+<script src="Cart [ Final ].js"></script>
+<script src="Bill.js"></script> 
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+  overflow-x: hidden;
+}
+
+/*==========================*/
+
+#imageHeader {
+  border-radius: 10px;
+  width: 100%;
+  top: 500px;
+  transform: translateX(17px);
+  height: 500px;
+  background-image: url("");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#imageHeader div {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#imageHeader div h1 {
+  color: white;
+  font-size: 80px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*==========================*/
+
+.header {
+  text-align: center;
+  top: 100px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3.5rem;
+}
+
+.QnA {
+  width: 100%;
+  padding: 12px 12px 12px;  
+  transform: translateX(0px);
+  height: 200px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.QnA .Q {
+  height: 100px;
+  text-align: left;
+  background-color: #24252a;
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+.QnA .A {
+  height: 100px;
+  text-align: left;
+  background-color: rgb(194, 144, 144);
+  color: rgb(0, 0, 0);
+  border-radius: 0 0 15px 15px;
+  transform: translateY(-22px);
+}
+.QnA .A h1 {
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 50px;
+  font-size: 30px;
+}
+.QnA .Q h1 {
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 50px;
+}

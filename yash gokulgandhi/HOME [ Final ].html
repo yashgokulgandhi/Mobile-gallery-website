@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=ISO-8859-1"
+         http-equiv="content-type">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Navbar</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="NavigationStyle.css">
+        <link rel="stylesheet" href="ImageSlider.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Cart.css"/>
+	      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+        <script>
+		
+          function Delete(e){
+            let items = [];
+            JSON.parse(localStorage.getItem('items')).map(data=>{
+              if(data.id != e.parentElement.parentElement.children[0].textContent){
+                
+                items.push(data);
+      
+              }
+            });
+            localStorage.setItem('items',JSON.stringify(items));
+            window.location.reload();
+          };
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="HOME [ Final ].html"><img src="Images/003.PNG" alt="logo"></a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="HOME [ Final ].html">Home</a></li>                  
+                    <li><a href="Product [ Final ].html">Products</a></li>
+                    <li><a href="About US [ Final ].html">About US</a></li>
+                    <li><a href="Contact US [ FINAL ].html">Contact US</a></li>
+                    <li><a href="FAQs [ Final ].html">FAQs</a></li>
+                </ul>
+            </nav>
+            
+          
+            <div class="iconShopping">
+              <div class="cta">
+                <p>0</p>
+              <p class="menu cta">0</p>
+              <i class="fa fa-shopping-cart"></i>
+            </div>
+          </div>
+
+        </header>
+        <div class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="Product [ Final ].html">Products</a>
+                <a href="About US [ Final ].html">About US</a>
+                <a href="Contact US [ FINAL ].html">Contact US</a>
+                <a href="FAQs [ Final ].html">FAQs</a>
+            </div>
+        </div>
+        <script type="text/javascript" src="mobile.js"></script>
+
+
+        
+
+
+        <!--image slider start-->
+    <div class="slider">
+        <div class="slides">
+          <!--radio buttons start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio buttons end-->
+          <!--slide images start-->
+          <div class="slide first">
+            <img src="Images/005.JPG" alt="">
+          </div>
+          <div class="slide">
+            <img src="Images/006.JPG" alt="">
+          </div>
+          <div class="slide">
+            <img src="Images/007.JPG" alt="">
+          </div>
+          <div class="slide">
+            <img src="Images/008.JPG" alt="">
+          </div>
+          <!--slide images end-->
+          <!--automatic navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+    </div>
+        <!--manual navigation end-->
+      
+        
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+               
+    
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+       <li><a href="HOME [ Final ].html">Home</a></li>
+       <li><a href="About US [ Final ].html">About US</a></li>
+          <li><a href="Product [ Final ].html">Product</a></li>
+          <li><a href="Contact US [ FINAL ].html">Contact US</a></li>  	 				
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="FAQs [ Final ].html">FAQ</a></li>
+          <li><a href="FAQs [ Final ].html">shipping</a></li>
+          <li><a href="FAQs [ Final ].html">returns</a></li>
+          <li><a href="FAQs [ Final ].html">order status</a></li>
+          <li><a href="FAQs [ Final ].html">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="Smartphones [ Final ].html">Smartphones</a></li>
+          <li><a href="Accessories [ Final ].html">PowerBanks</a></li>
+          <li><a href="Accessories [ Final ].html">Smart Watches</a></li>
+          <li><a href="Accessories [ Final ].html">Earphones</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/nvv.edificators.31"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/edificators"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/the_edificators/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCgrNHNdH9kALLAYYRzkAP7g"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cartBox">
+  <div class="cart">
+    <i class="fa fa-close"></i>
+    <h1>Cart</h1>
+    <br><br>
+    <table></table>
+  </div>
+  <div class="anchor">
+    <a href="">Proceed To Checkout</a>
+  </div>
+</div>
+
+
+<div class="Bill">
+	<div class="cart">
+	  <i class="fa fa-close"></i>
+	  <h1>Bill</h1>
+	  <br><br>
+	  <table></table>
+	  <div class="table">
+		<table2></table2>
+	  </div>
+	</div>
+  </div>
+
+
+<!-- script -->
+<script src="Cart [ Final ].js"></script>
+
+<script type="text/javascript">
+  var counter = 1;
+  setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 4){
+      counter = 1;
+    }
+  }, 5000);
+  </script>
+
+    </body>
+        
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=ISO-8859-1"
+         http-equiv="content-type">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Navbar</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="NavigationStyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Cart.css"/>
+	      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+		
+      <script>
+		
+        function Delete(e){
+          let items = [];
+          JSON.parse(localStorage.getItem('items')).map(data=>{
+            if(data.id != e.parentElement.parentElement.children[0].textContent){
+              
+              items.push(data);
+    
+            }
+          });
+          localStorage.setItem('items',JSON.stringify(items));
+          window.location.reload();
+        };
+      </script>
+
+  </head>
+  <body>
+      <header>
+          <a class="logo" href="HOME [ Final ].html"><img src="Images/003.PNG" alt="logo"></a>
+          <nav>
+              <ul class="nav__links">
+                  <li><a href="HOME [ Final ].html">Home</a></li>                  
+                  <li><a href="Product [ Final ].html">Products</a></li>
+                  <li><a href="About US [ Final ].html">About US</a></li>
+                  <li><a href="Contact US [ FINAL ].html">Contact US</a></li>
+                  <li><a href="FAQs [ Final ].html">FAQs</a></li>
+              </ul>
+          </nav> 
+
+        
+          <div class="iconShopping">
+            <div class="cta">
+              <p>0</p>
+            <p class="menu cta">0</p>
+            <i class="fa fa-shopping-cart"></i>
+          </div>
+        </div>
+
+      </header>
+      <div class="overlay">
+          <a class="close">&times;</a>
+          <div class="overlay__content">
+              <a href="Product [ Final ].html">Products</a>
+              <a href="About US [ Final ].html">About US</a>
+              <a href="Contact US [ FINAL ].html">Contact US</a>
+              <a href="FAQs [ Final ].html">FAQs</a>
+          </div>
+      </div>
+      <script type="text/javascript" src="mobile.js"></script>
+
+      <br><br><br><br><br><br><br><br><br><br><br>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(226, 226, 226);
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: both;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.Container {
+  border-radius: 5px;
+  background-color: #ececec;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column .mobile {
+  width: 50%;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="Container">
+  <div style="text-align:center">
+    <h1>Contact Us</h1>
+    <h3>Swing by for a cup of coffee, or leave us a message:</h3>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7382.573052114465!2d73.19997063488768!3d22.305001000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcf5e1f5de041%3A0xa1eb2b08463ee73f!2sMobile%20Gallery!5e0!3m2!1sen!2sin!4v1619902830207!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">Full Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <div class="mobile">
+          <label for="lname">Mobile No.</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your Mobile No...">
+          <label for="lname">Email</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your Email...">
+        </div>
+        <label for="fname">Subject</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your Subject...">
+        
+        <label for="subject">Message</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var counter = 1;
+  setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 4){
+      counter = 1;
+    }
+  }, 5000);
+  </script>
+
+<div class="cartBox">
+<div class="cart">
+<i class="fa fa-close"></i>
+<h1>Cart</h1>
+<br><br>
+<table></table>
+</div>
+<button id="cartRefresh">Refresh</button>
+<button id="cartCheckOut">ChechOut</button>
+<div class="anchor">
+<a href="">Proceed To Checkout</a>
+</div>
+</div>
+
+
+<div class="Bill">
+	<div class="cart">
+	  <i class="fa fa-close"></i>
+	  <h1>Bill</h1>
+	  <br><br>
+	  <table></table>
+	  <div class="table">
+		<table2></table2>
+	  </div>
+	</div>
+  </div>
+
+
+<br><br><br><br>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+       <li><a href="HOME [ Final ].html">Home</a></li>
+       <li><a href="About US [ Final ].html">About US</a></li>
+          <li><a href="Product [ Final ].html">Product</a></li>
+          <li><a href="Contact US [ FINAL ].html">Contact US</a></li>  	 				
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="FAQs [ Final ].html">FAQ</a></li>
+          <li><a href="FAQs [ Final ].html">shipping</a></li>
+          <li><a href="FAQs [ Final ].html">returns</a></li>
+          <li><a href="FAQs [ Final ].html">order status</a></li>
+          <li><a href="FAQs [ Final ].html">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="Smartphones [ Final ].html">Smartphones</a></li>
+          <li><a href="Accessories [ Final ].html">PowerBanks</a></li>
+          <li><a href="Accessories [ Final ].html">Smart Watches</a></li>
+          <li><a href="Accessories [ Final ].html">Earphones</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/nvv.edificators.31"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/edificators"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/the_edificators/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCgrNHNdH9kALLAYYRzkAP7g"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- script -->
+<script src="Cart [ Final ].js"></script>
+
+</body>
+</html>
